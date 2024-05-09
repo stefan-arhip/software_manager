@@ -1,0 +1,115 @@
+object fMain: TfMain
+  Left = 292
+  Height = 346
+  Top = 154
+  Width = 505
+  Caption = 'Software Manager'
+  ClientHeight = 346
+  ClientWidth = 505
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  SessionProperties = 'deAppsFolder.Directory'
+  LCLVersion = '3.2.0.0'
+  object pcMain: TPageControl
+    Left = 0
+    Height = 323
+    Top = 0
+    Width = 505
+    ActivePage = TabSheet1
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    TabWidth = 75
+    OnChange = pcMainChange
+    object TabSheet1: TTabSheet
+      Caption = 'APPS'
+      ClientHeight = 295
+      ClientWidth = 497
+      object lvApps: TListView
+        Left = 0
+        Height = 295
+        Top = 0
+        Width = 497
+        Align = alClient
+        AllocBy = 50
+        Columns = <        
+          item
+            Caption = 'Caption'
+            Width = 10
+          end        
+          item
+            Caption = 'Address'
+            Width = 10
+          end>
+        LargeImages = ImageList1
+        ReadOnly = True
+        RowSelect = True
+        TabOrder = 0
+        ViewStyle = vsIcon
+        OnDblClick = lvAppsDblClick
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'SETTINGS'
+      ClientHeight = 295
+      ClientWidth = 497
+      object deAppsFolder: TDirectoryEdit
+        Left = 8
+        Height = 23
+        Top = 24
+        Width = 480
+        ShowHidden = False
+        ButtonWidth = 23
+        NumGlyphs = 1
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 0
+        TabOrder = 0
+      end
+      object Label1: TLabel
+        Left = 8
+        Height = 15
+        Top = 10
+        Width = 61
+        Caption = 'Apps folder'
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'ABOUT'
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 323
+    Width = 505
+    Panels = <>
+  end
+  object ImageList1: TImageList
+    Height = 32
+    Width = 32
+    Left = 376
+    Top = 120
+    Bitmap = {
+      4C7A0100000020000000200000008F0100000000000078DAEDD7CD4A026114C6
+      7117411F6041A42EEC0EBA823619740541F7125848DA32681D05519B40DADAE8
+      36685B5134426A981F68A868699A5A7A3ACF3823A2CEF24C8B3CF05FCCBB787F
+      C32C66E6B5D9FEFD4C29017728B2EFA270C04961BF706CC082099BB347022E2A
+      DF9F50E9F6884A77C7B2B1010B266CCEA1F897E8231AA48703173D1EBAB965A1
+      DC9A010B266CCEA9EC2D52FD2542CFA7AB143B5BA3D8F9BA4CBC370C583061A3
+      2BDF023553D7940A6E52EA724B363660C1ECFBBB7364F5C0ECFB3B33DA9AAAAA
+      14559F281A5565E2BD61683E9BC37E2C1EA74422261A8C613FA4FBC9649252AF
+      B2C1C084C6F8E94C86B2D9B46830CCFC7C2E4F6FF99C6830CCFC42B144C56241
+      341823BEB7E7972BEF54A9944583A1F9DE417F5A5BABD53EA956ADCAC646CF9F
+      1EF11B5F4D6A34EAB2B161E67FB77FA8DD6A8906C3CCEF729D4E47B4AEFEFE1D
+      E75B39137FE24F7CE3FB336BBDCFA6E12BBE79CB7D98BAEFB8D876DEE01AF784
+      E7221A1BB060EAFFFF3883AC701E6EC3A23CBA6937CE60C659C4A21C03F69FCE
+      2F45222AB4
+    }
+  end
+  object IniPropStorage1: TIniPropStorage
+    StoredValues = <>
+    Left = 376
+    Top = 32
+  end
+end
